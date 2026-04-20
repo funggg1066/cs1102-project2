@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - CS1102 Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .quiz-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .feedback {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .feedback.correct {
+            color: green;
+        }
+        .feedback.incorrect {
+            color: red;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #next-question {
+            display: none;
+        }
+        #score-container {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Background</a></li>
+            <li><a href="mechanic.html">Mechanic</a></li>
+            <li><a href="limitation.html">Limitation</a></li>
+            <li><a href="summary.html">Summary</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="quiz-container">
+            <div id="question-number"></div>
+            <div id="question-text" class="question"></div>
+            <form id="quiz-form">
+                <div id="options" class="options">
+                </div>
+                <button type="submit" id="submit-answer">Submit Answer</button>
+            </form>
+            <div id="feedback" class="feedback"></div>
+            <button id="next-question">Next Question</button>
+            <div id="score-container"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 [CS1102]. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
