@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset allocation methodologies - CS1102 Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CS1102 - Course Project - 2025 / 2026 Semester B</h1>
+        <ul>
+        <h2>Project Topic: Robo-Advisory: Portfolio Construction and Risk Profiling</h2>
+        </ul>
+        
+        <ul>
+            <p>Group Members: </p>
+            <li>Yip Hiu Fung - 58605568</li>
+            <li>Tsang Shun Him - 58640429</li>
+            <li>Yau Man Tik - 60173989</li>
+        </ul>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+
+        </ul>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Background</a></li>
+            <li><a href="mechanic.html">Mechanic</a></li>
+            <li><a href="mechanic2.html">Asset allocation methodologies</a></li>
+            <li><a href="mechanic3.html">Performance Comparison</a></li>
+            <li><a href="limitation.html">Limitation</a></li>
+            <li><a href="summary.html">Summary</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Mechanic</h2>
+        <p><strong>• Asset allocation methodologies:</strong></p>
+
+<p>
+    Asset allocation accounts for most returns’ variability across different investment strategies. By using different asset allocation methodologies, the allocation and return performance would be different. All robo-advisors help their clients invest in portfolios that are diversified across asset classes.
+</p>
+
+
+    <p><strong>• Brief description of methodologies:</strong></p>
+<p><strong>Equal weighting (1/N):</strong> All assets in the investable universe share the same portfolio weight averagely. No optimization is performed and no estimates of expected returns, variances or covariances are required.</p>
+    
+<p><strong>Risk parity:</strong> Weights are chosen individually so that each asset contributes equally according to the portfolio’s total volatility. This requires estimating covariances or a simplified version involving only volatilities and a constant correlation implementation but does not use expected returns.</p>
+
+<p><strong>Simplified version of mean variance model:</strong> Based on the classical Markowitz framework, this method selects weights that maximize expected return for a given level of volatility or minimize volatility for a given return. For its “simplified” version, the optimization can be re parameterised from trading strategies to final positions, directing to explicit formulas for the optimal portfolio based on the mean variance statistics. The key input are estimates of expected returns, variances and covariances of all assets.</p>
+
+
+<p><strong>• Return characteristics:</strong></p>
+
+    
+<p><strong>Equal weighting</strong> has historically delivered competitive returns. Studies show that no single optimized strategy consistently outperforms 1/N out of sample largely since estimation errors in expected returns damage optimized portfolios (DeMiguel et al., 2009). The return of per average 1/N tends to be moderate but stable, avoiding extreme underperformance.</p>
+    
+<p><strong>Risk parity</strong> does not explicitly target expected return. The weights depend on volatility. Therefore, it tends to favor lower volatility assets (e.g., bonds over stocks). In a multi asset context, this leads to a return that is generally lower than a pure equity portfolio but often higher than a naive 60:40 of stock/bond mix, depending on the period. The return profile is more balanced across financial instruments because no single asset dominates the risk budget.</p>
+
+<p><strong>Simplified mean variance model</strong> can achieve the highest expected return for any chosen volatility level (it lies on the efficient frontier) by theory. However, this is purely following samples and under the assumption that expected returns are confirmed reliably. In practice, small errors in expected return estimation lead to huge changes in optimal weights and poor performance without sampling. It shows that the solution to the Markowitz problem (maximizing return for a given variance) is a linear combination of the minimum variance portfolio and the “market like” element 1-π(1). This highlights that the optimal return is highly sensitive to the specification of that boundary. Consequently, realised returns of a naïve mean variance (with sample) implementation are often lower than equal weighting or risk parity out of sample.</p>
+
+
+<p><strong>• Volatility characteristics:</strong></p>
+<p><strong>Equal weighting</strong> tends to produce a volatility that is roughly the average volatility of the constituents, reduced by diversification. It does not target a specific volatility level. For a large number of assets, the portfolio volatility converges to the average covariance, which can still be substantial if assets are correlated.</p>
+    
+<p><strong>Risk parity</strong> explicitly controls volatility by equalising risk contributions. The resulting portfolio volatility is typically lower than that of an equal weighted portfolio if asset volatilities differ widely, because the method allocates more weight to low volatility assets. The overall volatility can be scaled up or down using leverage. Risk parity portfolios exhibit relatively stable volatility over time, as the risk balancing mechanism automatically adjusts to changing market conditions.</p>
+
+<p><strong>Simplified mean variance model</strong> can target any desired volatility level via the parameter σ^2 in Problem (C) of the paper. Below equation shows that for a given target variance σ^2, the optimal expected return is μ_"mv" +√(σ^2-σ_"mv" ^2 ) " " √((E[1-π(1)])/(E[π(1)])), where μ_"mv" ,σ_"mv" ^2 come from the minimum variance portfolio. Thus, the investor can exactly achieve the desired volatility by theory. In practice, because the covariance matrix is estimated along errors, the realised volatility may deviate from the target. Especially when the portfolio contains many assets or market turmoil that correlations will change unexpectedly.</p>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2025 [CS1102]. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

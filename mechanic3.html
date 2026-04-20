@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Comparison - CS1102 Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CS1102 - Course Project - 2025 / 2026 Semester B</h1>
+        <ul>
+        <h2>Project Topic: Robo-Advisory: Portfolio Construction and Risk Profiling</h2>
+        </ul>
+        
+        <ul>
+            <p>Group Members: </p>
+            <li>Yip Hiu Fung - 58605568</li>
+            <li>Tsang Shun Him - 58640429</li>
+            <li>Yau Man Tik - 60173989</li>
+        </ul>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+
+        </ul>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Background</a></li>
+            <li><a href="mechanic.html">Mechanic</a></li>
+            <li><a href="mechanic2.html">Asset allocation methodologies</a></li>
+            <li><a href="mechanic3.html">Performance Comparison</a></li>
+            <li><a href="limitation.html">Limitation</a></li>
+            <li><a href="summary.html">Summary</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+    <main>
+<table>
+    <thread>
+        <tr>
+            <th scope="col">Criteria</th>
+            <th scope="col">Equal weighting</th>
+            <th scope="col">Risk parity</th>
+            <th scope="col">Simplified versions of the mean-variance model</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <th scope="row">Return (out of sample)</th>
+            <td>Moderate, robust</td>
+            <td>Moderate, relatively balanced</td>
+            <td>Potentially high, but very sensitive to estimation errors</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Volatility control</th>
+            <td>None (resulting volatility is incidental)</td>
+            <td>Active, stable</td>
+            <td>Exact in theory, fragile in practice</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Estimation requirements</th>
+            <td>None</td>
+            <td>Covariances (or volatilities + correlation assumption)</td>
+            <td>Expected returns, variances, covariances</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Sensitivity to input errors</th>
+            <td>None</td>
+            <td>Low (only covariances needed)</td>
+            <td>Very high (especially to expected returns)</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Typical Sharpe ratio (historical evidence)</th>
+            <td>Often higher than naïve mean variance</td>
+            <td>Comparable or slightly higher than 1/N in multi asset settings</td>
+            <td>Lower than 1/N out of sample due to estimation error</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p> To sum up, the simplified version of mean variance methodology above equal weighting and risk parity in terms of generating the highest possible return for a given volatility (or the lowest volatility for a given return). In reality, where expected returns are highly uncertain, equal weighting and risk parity often outperform mean variance model because they are robust to estimation errors. Risk parity provides superior and stable volatility risk control compared to equal weighting, while sacrificing some potential gain. Equal weighting remains a strong baseline due to its simplicity and absence of estimation risk.</p>
+
+
+
+<p>Therefore, the result performance of these methodologies depends on the investor’s confidence in return forecasts accuracy. If such forecasts are unreliable, equal weighting or risk parity are preferable. If one can obtain very precise return estimates (like in certain factor based or arbitrage strategies), the simplified mean variance model provides the theoretically more optimal allocation.</p>
+
+
+    
+    </main>
+    <footer>
+        <p>&copy; 2026 [CS1102]. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
