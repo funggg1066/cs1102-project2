@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #000; 
+    line-height: 1.8;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 3rem; 
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 3rem; 
+    height: auto;
+    display: block;
+}
+
+/* Header-navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; 
+    margin-bottom: 0;
+    display: inline-block;
+    position: relative;
+    padding: 8px 15px;  
+    font-weight:bold;  
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+    z-index: 1;
+}
+
+/* Header-navigation-dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    min-height: 12rem; 
+    background-image: "hero.jpeg";
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-text h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 3rem; 
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+/* Student ID Section */
+.sid {
+    background-color: #fff;
+    color: #000;
+    padding: 1.5rem 3rem;
+}
+
+.sid p {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem; 
+}
+
+/* Content Section */
+.content {
+    max-width: 50rem; 
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    color: #000;
+}
+
+.content p {
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+/* Footer-references Section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 3rem; 
+    background-color: #fff;
+}
+
+.references h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.references li {
+    list-style: none; 
+    padding: 0;
+    font-size: 1em;
+    margin-bottom: 3px; 
+    text-indent: -0.5in; 
+    padding-left: 0.5in; 
+}
+
+
+
+/* Bottom navigation for button */
+.Bottom-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.Bottom-nav_button {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Bottom-nav_button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.previous {
+    margin-left: 20px;
+}
+
+.next {
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+
+/* Content of Blockchain Architecture Section */
+.content-Architecture {
+    max-width: 50rem; 
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    
+}
+
+.content-Architecture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:"hero.jpeg";
+    opacity: 0.1; 
+    z-index: -1; 
+}
+
+.content-Architecture h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    color: #000;
+}
+
+.content-Architecture p {
+    margin-bottom: 1rem;
+    color: #000;
+    font-size: 1rem;
+
+}
+
+
+/* Content of Consensus Mechanisms Section */
+.content-Consensus_Mechanisms {
+    max-width: 50rem; 
+    margin: 0 auto;
+    padding: 1.5rem 3rem;
+    
+}
+
+.content-Consensus_Mechanisms::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:"hero.jpeg";
+    opacity: 0.1; 
+    z-index: -1; 
+}
+
+.content-Consensus_Mechanisms h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    color: #000;
+}
+
+.content-Consensus_Mechanisms p {
+    margin-bottom: 1rem;
+    color: #000;
+    font-size: 1rem;
+}
+
+
+/* quiz */
+.hidden {
+    display: none;
+}
+
+#question-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.option-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+.option-btn.selected {
+    background-color: #d3e4ff;
+}
+
+#result-container {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+}
+#progress-fill {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0;
+    transition: width 0.3s;
+    border-radius: 3px;
+}
+
+#question {
+    padding: 10px 0;
+    font-size: 1.5em;
+}
+
+#progress {
+    padding: 10px 0;
+    font-size: 1em;
+}
+
+.correct-answer {
+    color: green;
+}
+
+#result-feedback {
+    padding: 15px;
+}
+#result-feedback li {
+    padding: 10px 0;
+}
